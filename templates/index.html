@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block title %}
+Neo LED Window Matrix
+{% endblock %}
+
+
+{% block content %}
+
+<!--
+	TIPS about using Bootstrap-Flask:
+	https://github.com/helloflask/bootstrap-flask
+	https://bootstrap-flask.readthedocs.io/
+-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto">
+
+      <h1 class="pt-5 pb-2">Willkommen zur Window LED Matrix!</h1>
+
+      <p class="lead">Hier können Sie die gewünschte Nachricht eingeben und die Einstellungen setzen.</p>
+
+      <a href="/message">Nachricht</a>
+      <a href="/settings">Einstellungen</a>
+
+      <p class="pt-5"><strong>{{ message }}</strong></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

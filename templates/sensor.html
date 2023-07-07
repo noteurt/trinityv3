@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Best Movie Actors
+{% endblock %}
+
+
+{% block content %}
+
+<!--
+	TIPS about using Bootstrap-Flask:
+	https://github.com/helloflask/bootstrap-flask
+	https://bootstrap-flask.readthedocs.io/
+-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto">
+
+      <h1 class="pt-5 pb-2">Sensoren</h1>
+
+      <a href="/">Startseite</a>
+
+
+      <table>
+        <tr>
+            <th>Raum</th>
+            <th>Temp</th>
+            <th>Mac</th>
+        </tr>
+        {% for room in rooms %}
+        <tr>
+            <td>{{ room.room }}</td>
+            <td>{{ room.temperature }}</td>
+            <td>{{ room.mac }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+
+      <p class="pt-5"><strong>{{ message }}</strong></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
